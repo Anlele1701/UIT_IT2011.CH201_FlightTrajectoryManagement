@@ -1,0 +1,13 @@
+services:
+  database:
+    image: timescale/timescaledb-ha:pg16
+    container_name: flight-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: flight_trajectory
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./.timescaledb-data:/home/postgres/pgdata/data
