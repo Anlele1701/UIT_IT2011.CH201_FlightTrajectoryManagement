@@ -1,1 +1,13 @@
+# Git LFS tracking rules.
+# Commit this file so everyone uses the same LFS patterns.
+#
+# Notes:
+# - Add patterns/paths below (one per line).
+# - After updating, run: git add .gitattributes && git commit -m "Configure Git LFS"
+
+# Large CSV currently in the repo (>100MB):
 src/data/2020-05-04_flight_datas.csv filter=lfs diff=lfs merge=lfs -text
+# Examples (uncomment / edit as needed):
+# *.zip filter=lfs diff=lfs merge=lfs -text
+# *.mp4 filter=lfs diff=lfs merge=lfs -text
+# assets/models/** filter=lfs diff=lfs merge=lfs -text
